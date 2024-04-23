@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(/Image/background.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: rgb(64, 233, 245);
+  height: 100vh;
+  margin: 0;
+  text-align: center;
+  overflow: hidden;
+  font-family: "Pacifico", cursive;
+}
+
+.screen {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 27vh;
+  width: 100vw;
+  font-size: 1.6rem;
+}
+.screen.visible {
+  display: flex;
+}
+
+
+.btn {
+  font-size: 30px;
+  transition-duration: 0.4s;
+  padding: auto;
+  font-family: inherit;
+}
+.btn:hover {
+  background-color: rgb(64, 233, 245);
+  color: rgb(0, 0, 0);
+}
+
+.game-container {
+  position: relative;
+}
+.time {
+position: absolute;
+top: 20px;
+left: 20px;
+}
+.score {
+position: absolute;
+top: 20px;
+right: 20px;
+}
+
+.target {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
