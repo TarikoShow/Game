@@ -16,11 +16,7 @@ startButton.addEventListener("click", () => {
 
 function startGame() {
   setInterval(increaseTime, 1000);
-  //createTarget();
-  target.onclick = function () {
-    result += 10;
-    score.innerHTML = `Счет ${result}`;
-  };
+  catchTarget();
 }
 
 function increaseTime() {
@@ -52,20 +48,21 @@ let flag = true;
 function posForTarget() {
   if (window.innerWidth - 250 > step && flag == true) {
     target.style.transform = "scaleX(1)";
-    step += 10;
+    step += 1;
   } else {
     target.style.transform = "scaleX(-1)";
-    step -= 10;
+    step -= 1;
     flag = step == 0 ? true : false;
   }
   target.style.left = step + "px";
 }
 setInterval(function () {
   posForTarget();
-}, 30);
+}, 1);
 
-// function catchTarget() {
-//   increaseScore();
+function catchTarget() {
+  increaseScore();
+}
 
 //addTarget();
 //this.remove();
@@ -75,9 +72,9 @@ setInterval(function () {
 //setTimeout(createTarget, 1000)
 //}
 
-// уже реальзованно в старт функции. но сохранено для реализации событий
-
-// function increaseScore() {
-//   score = + 10;
-//   score.innerHTML = `Счет ${score}`;
-// }
+function increaseScore() {
+  target.onclick = function () {
+    result += 10;
+    score.innerHTML = `Счет ${result}`;
+  };
+}
