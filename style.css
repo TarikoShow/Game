@@ -5,7 +5,7 @@
 }
 
 body {
-  background-image: url(../Image/background.webp);
+  background-image: url(Image/background.webp);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -30,7 +30,6 @@ body {
   display: flex;
 }
 
-
 .btn {
   font-size: 30px;
   transition-duration: 0.4s;
@@ -46,21 +45,22 @@ body {
   position: relative;
 }
 .time {
-position: absolute;
-top: 20px;
-left: 20px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 .score {
-position: absolute;
-top: 20px;
-right: 20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 #target {
+  margin-left: 100px;
   margin-top: 40%;
   cursor: pointer;
   width: 50px;
   height: 50px;
   position: absolute;
-border-radius: 4rem;
+  border-radius: 4rem;
 }

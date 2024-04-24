@@ -16,6 +16,11 @@ startButton.addEventListener("click", () => {
 
 function startGame() {
   setInterval(increaseTime, 1000);
+  //createTarget();
+  target.onclick = function () {
+    result += 10;
+    score.innerHTML = `Счет ${result}`;
+  };
 }
 
 function increaseTime() {
@@ -23,12 +28,29 @@ function increaseTime() {
   seconds++;
 }
 
-function createTarget() {}
+// function createTarget() {
+//   const { x, y} = getRandomLocation();
+//   const target = document.createElement("img");
+//   target.src = "Image/target.webp";
+//   target.style.display = "block";
+//   target.style.top =`${y}px`;
+//   target.style.left = `${x}px`;
+//   gameNode.appendChild(target);
+// }
+
+// function getRandomLocation() {
+//   const width = window.innerWidth;
+//   const height = window.innerHeight;
+
+//   const x = (Math.random() * width) -250;
+//   const y = (Math.random() * height) - 50;
+//   return {x, y};
+// }
 
 let step = 0;
 let flag = true;
 function posForTarget() {
-  if (window.innerWidth - 50 > step && flag == true) {
+  if (window.innerWidth - 250 > step && flag == true) {
     target.style.transform = "scaleX(1)";
     step += 10;
   } else {
@@ -38,10 +60,24 @@ function posForTarget() {
   }
   target.style.left = step + "px";
 }
-//setInterval(function () {posForTarget()}, 8);
+setInterval(function () {
+  posForTarget();
+}, 30);
 
-function catchTarget() {}
+// function catchTarget() {
+//   increaseScore();
 
-function addTatget() {}
+//addTarget();
+//this.remove();
+// }
 
-function increaseScore() {}
+//function addTarget() {
+//setTimeout(createTarget, 1000)
+//}
+
+// уже реальзованно в старт функции. но сохранено для реализации событий
+
+// function increaseScore() {
+//   score = + 10;
+//   score.innerHTML = `Счет ${score}`;
+// }

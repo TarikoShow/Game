@@ -14,45 +14,6 @@
 
 -------------------------------Введение конец----------------------
 
-<div>
-     <img src="../image/bird.gif" alt="bird" id="bird" />
-</div>
-<script>
-      let birdImg = document.getElementById("bird");
-      let balImg = document.getElementById("bal");
-      let step = 0;
-      let stepn = 0;
-      let flag = true;
-      balImg.hidden = true;
-
-      function animate1() {
-        if (window.innerWidth - 320 > step && flag == true) {
-          birdImg.style.transform = "scaleX(1)";
-          step += 1;
-        } else {
-          birdImg.style.transform = "scaleX(-1)";
-          step -= 1;
-          flag = step == 0 ? true : false;
-        }
-        birdImg.style.left = step + "px";
-    
-        if (Math.round(window.innerWidth / 2) == step + 159) {
-          balImg.hidden = false;
-        }
-      }
-      function animate2() {
-        if (window.innerHeight - 160 > stepn) {
-          stepn +=1;
-        } else {
-        }
-        balImg.style.top = stepn + "px";
-      }
-      setInterval(function() {
-        animate1();
-        animate2();
-      }, 8);
-    </script>
-
 -------------------------------Основа старт----------------------
 
 Решил создать игру "проверь меткость" кликер.
@@ -76,6 +37,12 @@
 8) Переходим в файл style для стилизации.
 Зададим всем элементам border-box для удобного размещения.
 Прописываем стили для body, экранов и кнопки.
+9) Переходим в js.
+Создаем переменные.
+Начинаем с кнопки "старт" - функция click. При нажатии начинается игра.
+Идет отсчет времени ( функция increaseTime ), двигается мишень ( posForTarget ) и работает увеличение очков при попадании по мешени ( increaseScore ).
+
+
 
 
 
@@ -88,8 +55,8 @@ https://github.com/TarikoShow/Game/tree/main
 -------------------------------Литература старт----------------------
 
 Электронные ресурсы 
-1) 
-2)
+1) https://htmlacademy.ru/
+2) https://learn.javascript.ru/
 3)
 
 -------------------------------Литература конец----------------------
